@@ -1,0 +1,147 @@
+:root {
+  /*Primary Colors*/
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /* Neurtal Colors */
+  --very-dark-blue-main: hsl(217, 54%, 11%); /*mainBG*/
+  --very-dark-blue-card: hsl(216, 50%, 16%); /*cardBG*/
+  --very-dark-blue: hsl(215, 32%, 27%); /*line*/
+  --white: hsl(0, 0%, 100%);
+
+  /* FontSize */
+  --general-font-size: 18px;
+  --general-font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--very-dark-blue-main);
+  font-family: var(--general-font-family);
+}
+
+.component {
+  width: 350px;
+  height: 588px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--very-dark-blue-card);
+  margin-top: 150px;
+  border-radius: 16px;
+  box-shadow: 15px 15px 20px 20px rgba(7, 7, 52, 0.5);
+}
+
+.nft-preview img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  border-radius: 12px;
+  margin-top: 24px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 30px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description .title {
+  color: var(--white);
+  font-weight: 600;
+  opacity: 0.85;
+  font-size: var(--general-font-size);
+}
+
+.description .text {
+  color: var(--soft-blue);
+  opacity: 0.75;
+}
+
+.description .prices {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  gap: 72px;
+}
+
+.description .prices .price {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 8px;
+  height: 24px;
+  color: var(--cyan);
+  opacity: 0.85;
+}
+
+.description .prices .price h3 {
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.description .prices .days {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 8px;
+  height: 24px;
+}
+
+.description .prices .days h4 {
+  color: var(--soft-blue);
+  margin-top: 4px;
+}
+
+.creator {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  margin-top: 24px;
+  border-top: 1px solid var(--very-dark-blue);
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding-top: 18px;
+}
+
+.creator .user-image {
+  border: 2px solid rgb(255, 255, 255, 0.5);
+  border-radius: 1px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  width: 50px;
+}
+
+.creator p {
+  margin-top: 18px;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.creator h3 {
+  margin-left: -20px;
+  margin-top: 18px;
+  color: var(--white);
+  opacity: 0.85;
+}
+
+.description .title:hover {
+  color: var(--cyan);
+  transition: all 250ms ease-in-out;
+}
+
+.creator h3:hover {
+  color: var(--cyan);
+  transition: all 250ms ease-in-out;
+}
+
+.nft-preview img:hover {
+  filter: hue-rotate(90deg);
+  transition: all 250ms ease-in-out;
+}
